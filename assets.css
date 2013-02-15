@@ -423,6 +423,7 @@ a:hover {
   text-decoration: underline;
 }
 
+table,
 h1,
 h2,
 h3,
@@ -513,7 +514,7 @@ code {
 #content {
   padding: 20px;
   padding-left: 260px;
-  max-width: 700px;
+  /*max-width: 700px;*/
 }
 
 #content .control {
@@ -637,3 +638,31 @@ code {
   padding: 15px;
   white-space: pre;
 }
+
+#content article table thead {
+  background: #f4f4f4;
+}
+#content article table thead th {
+  border: 1px solid #ccc;
+  padding: 5px;
+  color: #222222;
+  font-weight: 400;
+  text-align: left;
+}
+#content article table tbody td:first-child {
+  font-family: Monaco,monospace;
+}
+#content article table tbody td {
+  border: 1px solid #ccc;
+  padding: 7px;
+}
+#content article em {
+  font-family: Monaco,monospace;
+  color: #C00;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  padding: 2px 4px;
+  font-style: normal;
+}
+
+Consolas,Monaco,monospace
