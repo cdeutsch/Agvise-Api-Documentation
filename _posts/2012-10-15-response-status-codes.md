@@ -16,16 +16,16 @@ When [Creating an Export](#export-create) for example:
 
 ```{
 	"exportId": 226,
-	"exportStatusUrl": "http://submit.agvise.com/api/export/status/226",
-	"exportUrl": "http://submit.agvise.com/api/export/226"
+	"statusUrl": "http://submit.agvise.com/api/samples/export/status/226",
+	"downloadUrl": "http://submit.agvise.com/api/samples/export/226"
 }```
 
 #### xml
 
 ```<response>
-   <downloadUrl>http://submit.agvise.com/api/export/226</downloadUrl>
    <exportId>226</exportId>
-   <statusUrl>http://submit.agvise.com/api/export/status/226</statusUrl>
+   <statusUrl>http://submit.agvise.com/api/samples/export/status/226</statusUrl>
+   <downloadUrl>http://submit.agvise.com/api/samples/export/226</statusUrl>
 </response>```
 
 ### Error

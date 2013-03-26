@@ -1,34 +1,17 @@
 ---
 category: Export
-path: '/api/samples/export/status/{exportId}'
-title: 'Get Export Status'
+path: '/api/samples/export/status'
+title: 'Get All Exports Statuses'
 type: 'GET'
 
 layout: nil
 ---
 
-Returns the status of an export
-
-### Resource URI
-
-<table>
-	<thead>
-		<tr>
-	        <th>Parameter</th>
-	        <th>Description</th>
-	    </tr>
-    </thead>
-    <tbody>
-	    <tr>
-	        <td>{exportId}</td>
-	        <td>ExportId returned by the POST to <a href="#samples">/api/samples/export</a></td>
-	    </tr>
-    </tbody>
-</table>
+Returns a list of all exports and their statuses
 
 ### Response
 
-Sends back the status of the Export
+Sends back the status of each Export
 
 <table>
 	<thead>
@@ -54,18 +37,34 @@ Sends back the status of the Export
 
 #### json
 
-```{
-	"exportId": 226,
-	"status": "waiting",
-	"message": "Export is waiting"
-}```
+```[{
+	"exportId": 47,
+	"status": "Finished",
+	"message": "Export is finished",
+	"downloadUrl": "http://submit.agvise.com/api/samples/export/47"
+},
+{
+	"exportId": 48,
+	"status": "Waiting",
+	"message": "Export is waiting",
+	"downloadUrl": "http://submit.agvise.com/api/samples/export/48"
+}]```
 
 #### xml
 
-```<response>
-   <exportId>226</exportId>
-   <message>Export is waiting</message>
-   <status>waiting</status>
-</response>```
+```<ExportStatuses>
+    <ExportStatus>
+        <ExportId>47</ExportId>
+        <Status>Finished</Status>
+        <Message>Export is finished</Message>
+        <DownloadUrl>http://submit.agvise.com/api/samples/export/47</DownloadUrl>
+    </ExportStatus>
+    <ExportStatus>
+        <ExportId>48</ExportId>
+        <Status>Waiting</Status>
+        <Message>Export is waiting</Message>
+        <DownloadUrl>http://submit.agvise.com/api/samples/export/48</DownloadUrl>
+    </ExportStatus>
+</ExportStatuses>```
 
 For errors responses, see the [response status codes documentation](#response-status-codes).

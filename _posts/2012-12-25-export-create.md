@@ -22,25 +22,25 @@ This method creates a request to export multiple Samples.
     </thead>
     <tbody>
     	<tr>
-	        <td>account</td>
-	        <td>The account number to export Samples for.</td>
+	        <td>year</td>
+	        <td>Specifies the year to return Samples for.<br><br>Reference numbers aren't always unique across all years therefore this is required.</td>
 	        <td>Yes</td>
 	        <td> </td>
 	    </tr>
-    	<tr>
-	        <td>year</td>
-	        <td>Returns all Samples for a given year.</td>
+	    <tr>
+	        <td>account</td>
+	        <td>The account number to export Samples for.</td>
 	        <td> </td>
-	        <td> </td>
+	        <td>defaults to the account associated with the ApiKey used</td>
 	    </tr>
     	<tr>
-	        <td>ids</td>
+	        <td>referenceNumbers</td>
 	        <td>An Array of Reference Numbers to export.</td>
 	        <td> </td>
 	        <td> </td>
 	    </tr>
 	    <tr>
-	        <td>lastId</td>
+	        <td>lastReferenceNumber</td>
 	        <td>The last Reference Number you exported. All new Reference Numbers since the last one will be returned.</td>
 	        <td> </td>
 	        <td> </td>
@@ -71,25 +71,27 @@ This method creates a request to export multiple Samples.
 #### json
 
 ```{
+    "year": 2012,
 	"account": "AA0001",
 	"format": "json",
-	"ids": [ 1, 2 ],
+	"referenceNumbers": [ 1, 2 ],
 	"statusCallbackUrl": "https://www.yoursite.com/agvise/export/status",
 	"downloadCallbackUrl": "https://www.yoursite.com/agvise/export/download"
 }```
 
 #### xml
 
-```<request>
-   <account>AA0001</account>
-   <downloadCallbackUrl>https://www.yoursite.com/agvise/export/download</downloadCallbackUrl>
-   <format>xml</format>
-   <ids>
-      <id>1</id>
-      <id>2</id>
-   </ids>
-   <statusCallbackUrl>https://www.yoursite.com/agvise/export/status</statusCallbackUrl>
-</request>```
+```<ExportRequest>
+    <Year>2012</Year>
+    <Account>AA0001</Account>
+    <DownloadCallbackUrl>https://www.yoursite.com/agvise/export/download</DownloadCallbackUrl>
+    <Format>xml</Format>
+    <ReferenceNumbers>
+        <ReferenceNumber>101</ReferenceNumber>
+        <ReferenceNumber>102</ReferenceNumber>
+    </ReferenceNumbers>
+    <StatusCallbackUrl>https://www.yoursite.com/agvise/export/status</StatusCallbackUrl>
+</ExportRequest>```
 
 
 ### Response
@@ -102,16 +104,16 @@ Returns the Id of the Export.
 
 ```{
 	"exportId": 226,
-	"exportStatusUrl": "http://submit.agvise.com/api/export/status/226",
-	"exportUrl": "http://submit.agvise.com/api/export/226"
+	"statusUrl": "http://submit.agvise.com/api/samples/export/status/62",
+	"downloadUrl": "http://submit.agvise.com/api/samples/export/62"
 }```
 
 #### xml
 
-```<response>
-   <downloadUrl>http://submit.agvise.com/api/export/226</downloadUrl>
-   <exportId>226</exportId>
-   <statusUrl>http://submit.agvise.com/api/export/status/226</statusUrl>
-</response>```
+```<Export>
+    <ExportId>62</ExportId>
+    <StatusUrl>http://submit.agvise.com/api/samples/export/status/62</StatusUrl>
+    <DownloadUrl>http://submit.agvise.com/api/samples/export/62</DownloadUrl>
+</Export>```
 
 For errors responses, see the [response status codes documentation](#response-status-codes).

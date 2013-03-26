@@ -4,5 +4,9 @@ title: 'Authentication'
 layout: nil
 ---
 
-Authentication will be done via HTTP Basic Authentication or an Api Key
+Authentication is done via HTTP Basic Authentication.
+
+Use your Api Key as the username with an empty password.
+
+You can find your Api Key under [Settings - Api Settings](http://submit.agvise.com/settings/api)
 
