@@ -292,7 +292,7 @@ Create or edit a Sample. This is the API version of the [Submit Samples](http://
             <td>sampleIdentifier</td>
             <td>string</td>
             <td>50</td>
-            <td> </td>
+            <td>Yes</td>
             <td> </td>
         </tr>
         <tr>
