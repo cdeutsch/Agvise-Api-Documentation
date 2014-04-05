@@ -37,7 +37,8 @@ Sends back the status of each Export
 
 #### json
 
-```[{
+```
+[{
 	"exportId": 47,
 	"status": "Finished",
 	"message": "Export is finished",
@@ -48,11 +49,13 @@ Sends back the status of each Export
 	"status": "Waiting",
 	"message": "Export is waiting",
 	"downloadUrl": "http://submit.agvise.com/api/samples/export/48"
-}]```
+}]
+```
 
 #### xml
 
-```<ExportStatuses>
+```
+<ExportStatuses>
     <ExportStatus>
         <ExportId>47</ExportId>
         <Status>Finished</Status>
@@ -65,6 +68,7 @@ Sends back the status of each Export
         <Message>Export is waiting</Message>
         <DownloadUrl>http://submit.agvise.com/api/samples/export/48</DownloadUrl>
     </ExportStatus>
-</ExportStatuses>```
+</ExportStatuses>
+```
 
 For errors responses, see the [response status codes documentation](#response-status-codes).

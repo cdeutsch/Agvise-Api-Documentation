@@ -54,20 +54,24 @@ Sends back the status of the Export
 
 #### json
 
-```{
+```
+{
 	"exportId": 226,
 	"status": "Waiting",
 	"message": "Export is waiting",
 	"downloadUrl": "http://submit.agvise.com/api/samples/export/226"
-}```
+}
+```
 
 #### xml
 
-```<ExportStatus>
+```
+<ExportStatus>
     <ExportId>64</ExportId>
     <Status>Finished</Status>
     <Message>Export is finished</Message>
     <DownloadUrl>http://submit.agvise.com/api/samples/export/64</DownloadUrl>
-</ExportStatus>```
+</ExportStatus>
+```
 
 For errors responses, see the [response status codes documentation](#response-status-codes).

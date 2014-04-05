@@ -633,10 +633,14 @@ code {
   padding: 0 1px;
 }
 
+#content .body pre > code,
 #content .body p > code {
   display: block;
   padding: 15px;
   white-space: pre;
+}
+#content .body pre > code {
+  padding-top: 0;
 }
 
 #content article table thead {
@@ -663,6 +667,15 @@ code {
   border: 1px solid #e1e1e8;
   padding: 2px 4px;
   font-style: normal;
+}
+
+.warning {
+  background-color: #fcf8e3;
+  color: #8a6d3b;
+  padding: 15px;
+  margin-bottom: 21px;
+  border: 1px solid #faebcc;
+  border-radius: 4px;
 }
 
 Consolas,Monaco,monospace

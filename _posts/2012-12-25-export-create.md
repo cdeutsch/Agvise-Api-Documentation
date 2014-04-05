@@ -35,7 +35,13 @@ This method creates a request to export multiple Samples.
 	    </tr>
     	<tr>
 	        <td>referenceNumbers</td>
-	        <td>An Array of Reference Numbers to export.</td>
+	        <td>An Array of Reference Numbers to export samples for.</td>
+	        <td> </td>
+	        <td> </td>
+	    </tr>
+	    <tr>
+	        <td>electronicIds</td>
+	        <td>An Array of Electronic Ids to export samples for.</td>
 	        <td> </td>
 	        <td> </td>
 	    </tr>
@@ -70,18 +76,21 @@ This method creates a request to export multiple Samples.
 
 #### json
 
-```{
+```
+{
     "year": 2012,
 	"account": "AA0001",
 	"format": "json",
 	"referenceNumbers": [ 1, 2 ],
 	"statusCallbackUrl": "https://www.yoursite.com/agvise/export/status",
 	"downloadCallbackUrl": "https://www.yoursite.com/agvise/export/download"
-}```
+}
+```
 
 #### xml
 
-```<ExportRequest>
+```
+<ExportRequest>
     <Year>2012</Year>
     <Account>AA0001</Account>
     <DownloadCallbackUrl>https://www.yoursite.com/agvise/export/download</DownloadCallbackUrl>
@@ -91,7 +100,8 @@ This method creates a request to export multiple Samples.
         <ReferenceNumber>102</ReferenceNumber>
     </ReferenceNumbers>
     <StatusCallbackUrl>https://www.yoursite.com/agvise/export/status</StatusCallbackUrl>
-</ExportRequest>```
+</ExportRequest>
+```
 
 
 ### Response
@@ -102,18 +112,22 @@ Returns the Id of the Export.
 
 #### json
 
-```{
+```
+{
 	"exportId": 226,
 	"statusUrl": "http://submit.agvise.com/api/samples/export/status/62",
 	"downloadUrl": "http://submit.agvise.com/api/samples/export/62"
-}```
+}
+```
 
 #### xml
 
-```<Export>
+```
+<Export>
     <ExportId>62</ExportId>
     <StatusUrl>http://submit.agvise.com/api/samples/export/status/62</StatusUrl>
     <DownloadUrl>http://submit.agvise.com/api/samples/export/62</DownloadUrl>
-</Export>```
+</Export>
+```
 
 For errors responses, see the [response status codes documentation](#response-status-codes).

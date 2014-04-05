@@ -14,41 +14,47 @@ When [Creating an Export](#export-create) for example:
 
 #### json
 
-```{
+```
+{
 	"exportId": 226,
 	"statusUrl": "http://submit.agvise.com/api/samples/export/status/226",
 	"downloadUrl": "http://submit.agvise.com/api/samples/export/226"
-}```
+}
+```
 
 #### xml
 
-```<response>
+```
+<response>
    <exportId>226</exportId>
    <statusUrl>http://submit.agvise.com/api/samples/export/status/226</statusUrl>
    <downloadUrl>http://submit.agvise.com/api/samples/export/226</statusUrl>
-</response>```
+</response>
+```
 
 ### Error
 
 Error responses are simply returning [standard HTTP error codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) along with some additional information:
 
 * The error code is sent back as a status header,
-* The body includes an object describing both the code and message (for debugging and/or display purposes),
+* The body includes an object describing the error message (for debugging and/or display purposes),
 
 For a call with an invalid authentication token for example:
 
 ```Status: 401 Access denied```
 
-***json
+*** json
 
-```{
-    "code": 401,
+```
+{
     "message": "Access denied: invalid authentication token."
-}```
+}
+```
 
-***xml
+*** xml
 
-```<response>
-    <code>401</code>
+```
+<response>
     <message>Access denied: invalid authentication token.</message>
-</response>```
+</response>
+```

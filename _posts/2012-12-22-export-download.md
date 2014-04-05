@@ -35,7 +35,8 @@ Sends back a sample
 
 #### json
 
-```[
+```
+[
     {
         "id": 844,
         "referenceNumber": 10001,
@@ -58,11 +59,13 @@ Sends back a sample
         "fertilizerGuideline2": null,
         "fertilizerGuideline3": null
     }
-]```
+]
+```
 
 #### xml
 
-```<SampleExports>
+```
+<SampleExports>
     <SampleExport>
         <Id>844</Id>
         <ReferenceNumber>10001</ReferenceNumber>
@@ -79,6 +82,7 @@ Sends back a sample
         <GridNumber>70</GridNumber>
         <SampleDescription>5</SampleDescription>
     </SampleExport>
-</SampleExports>```
+</SampleExports>
+```
 
 For errors responses, see the [response status codes documentation](#response-status-codes).
