@@ -549,12 +549,13 @@ code {
   margin: 0;
 }
 
-#content a h2 code {
+#content .endpoint {
   float: right;
   font-size: 14px;
+  padding: 1em 1em 0 0;
 }
 
-#content a h2 code b {
+#content .endpoint b {
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -568,48 +569,48 @@ code {
   border-color: #e2e7ea;
 }
 
-#content article a h2 code {
+#content article .endpoint {
   color: #657e8b;
 }
 
-#content article a h2 code b {
+#content article .endpoint b {
   background: #657e8b;
   text-transform: uppercase;
 }
 
 /* GET */
-#content article.GET a h2 code {
+#content article.GET .endpoint {
   color: #119bdf;
 }
 
-#content article.GET a h2 code b {
+#content article.GET .endpoint b {
   background: #119bdf;
 }
 
 /* POST */
-#content article.POST a h2 code {
+#content article.POST .endpoint {
   color: #52ce0e;
 }
 
-#content article.POST a h2 code b {
+#content article.POST .endpoint b {
   background: #52ce0e;
 }
 
 /* PUT */
-#content article.PUT a h2 code {
+#content article.PUT .endpoint {
   color: #e08f10;
 }
 
-#content article.PUT a h2 code b {
+#content article.PUT .endpoint b {
   background: #e08f10;
 }
 
 /* DELETE */
-#content article.DELETE a h2 code {
+#content article.DELETE .endpoint {
   color: #e02a10;
 }
 
-#content article.DELETE a h2 code b {
+#content article.DELETE .endpoint b {
   background: #e02a10;
 }
 
