@@ -648,8 +648,6 @@ Create or edit a Sample. This is the API version of the [Submit Samples](http://
 
 ### Request
 
-#### json
-
 ```
 {
     "SampleOrderID": 0,
@@ -732,84 +730,6 @@ Create or edit a Sample. This is the API version of the [Submit Samples](http://
 }
 ```
 
-#### xml
-
-```
-<SampleOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <SampleOrderType>2</SampleOrderType>
-    <GrowerName>ABC Grower Name</GrowerName>
-    <GrowerAddress1>123 Fake St</GrowerAddress1>
-    <GrowerAddress2>Suite 650</GrowerAddress2>
-    <GrowerCity>Grand Forks</GrowerCity>
-    <GrowerState>ND</GrowerState>
-    <GrowerPostalCode>22222</GrowerPostalCode>
-    <GrowerAccountNumber>0123456789</GrowerAccountNumber>
-    <GrowerSampler>Sampler 123</GrowerSampler>
-    <SampleDate>2014-04-05T15:57:27.669Z</SampleDate>
-    <FieldIdentifier>123-A</FieldIdentifier>
-    <FieldName>23-A Field</FieldName>
-    <FieldCounty>Fargo</FieldCounty>
-    <FieldRange>12</FieldRange>
-    <FieldTownship>Hatton</FieldTownship>
-    <FieldSection>25</FieldSection>
-    <FieldQuarter>NE</FieldQuarter>
-    <FieldTotalAcres>902.5</FieldTotalAcres>
-    <FieldYearSampled>2012</FieldYearSampled>
-    <ManureApplied xsi:nil="true" />
-    <CropSelection1>Barley</CropSelection1>
-    <YieldGoal1>90</YieldGoal1>
-    <PKApplication1>University</PKApplication1>
-    <CropSelection2>S. Beets 6 lbs</CropSelection2>
-    <YieldGoal2>20</YieldGoal2>
-    <PKApplication2>Broadcast</PKApplication2>
-    <CropSelection3>Barley-Feed</CropSelection3>
-    <YieldGoal3>80</YieldGoal3>
-    <PKApplication3>Broadcast/Maint</PKApplication3>
-    <Samples>
-        <Sample>
-            <SampleIdentifier>111</SampleIdentifier>
-            <UniqueIdentifier>222</UniqueIdentifier>
-            <AnalysisOptions>DEALER DEFAULT</AnalysisOptions>
-            <PhosphorusOption />
-            <Depth1>24</Depth1>
-            <Depth2>48</Depth2>
-            <Depth3 xsi:nil="true" />
-            <Depth4 xsi:nil="true" />
-            <StartingDepthOf2nd>24</StartingDepthOf2nd>
-            <Acres>100</Acres>
-            <PreviousCrop>Canola-bu</PreviousCrop>
-            <YieldGoal1Override>90</YieldGoal1Override>
-            <YieldGoal2Override>20</YieldGoal2Override>
-            <YieldGoal3Override>80</YieldGoal3Override>
-            <ElectronicNumber>98765</ElectronicNumber>
-            <AdditionalAnalysisOptions>Phosphorus</AdditionalAnalysisOptions>
-            <AdditionalAnalysisOptions>Potassium</AdditionalAnalysisOptions>
-        </Sample>
-        <Sample>
-            <SampleIdentifier>112</SampleIdentifier>
-            <UniqueIdentifier>223</UniqueIdentifier>
-            <AnalysisOptions>DEALER DEFAULT</AnalysisOptions>
-            <PhosphorusOption />
-            <Depth1>24</Depth1>
-            <Depth2>48</Depth2>
-            <Depth3 xsi:nil="true" />
-            <Depth4 xsi:nil="true" />
-            <StartingDepthOf2nd>24</StartingDepthOf2nd>
-            <Acres>100</Acres>
-            <PreviousCrop>Canola-bu</PreviousCrop>
-            <YieldGoal1Override>90</YieldGoal1Override>
-            <YieldGoal2Override>20</YieldGoal2Override>
-            <YieldGoal3Override>80</YieldGoal3Override>
-            <ElectronicNumber>98765</ElectronicNumber>
-            <AdditionalAnalysisOptions>Phosphorus</AdditionalAnalysisOptions>
-            <AdditionalAnalysisOptions>Potassium</AdditionalAnalysisOptions>
-        </Sample>
-    </Samples>
-</SampleOrder>
-```
-
-
 ### Response
 
 Sends back the full details of the sample you sumbitted including the assigned SampleOrderID and sample ReferenceNumber
@@ -819,8 +739,6 @@ In order to return validiation messages, the response of this request is slightl
 ### Success
 
 * `200 OK` on success,
-
-#### json
 
 ```
 {
@@ -833,24 +751,9 @@ In order to return validiation messages, the response of this request is slightl
 }
 ```
 
-#### xml
-
-```
-<apiResponseOfSoilTest>
-  <data>
-    <sampleOrderID>12345</sampleOrderID>
-    <sampleOrderType>2</sampleOrderType>
-    ...
-  </data>
-  <error></error>
-</apiResponseOfSoilTest>
-```
-
 ### Error
 
 Error responses are simply returning [standard HTTP error codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) along with some additional information:
-
-#### json
 
 ```
 {
@@ -868,23 +771,3 @@ Error responses are simply returning [standard HTTP error codes](http://www.w3.o
     }
 }
 ```
-
-#### xml
-
-```
-<apiResponseOfSoilTest>
-  <data></data>
-  <error>
-    <message>Failed to save sample data due to validation errors.</message>
-    <validationErrors>
-      <string>Grower State is not a recognized value.</string>
-      <string>PKApplication1 is not a recognized value.</string>
-      <string>PhosphorusOption is not a recognized value.</string>
-      <string>PreviousCrop is not a recognized value.</string>
-      <string>AnalysisOptions is not a recognized value.</string>
-      <string>AdditionalAnalysisOptions contains a value that is not recognized.</string>
-    </validationErrors>
-  </error>
-</apiResponseOfSoilTest>
-```
-
