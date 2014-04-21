@@ -17,8 +17,8 @@ When [Creating an Export](#export-create) for example:
 ```
 {
 	"exportId": 226,
-	"statusUrl": "http://submit.agvise.com/api/samples/export/status/226",
-	"downloadUrl": "http://submit.agvise.com/api/samples/export/226"
+	"statusUrl": "https://submit.agvise.com/api/samples/export/status/226",
+	"downloadUrl": "https://submit.agvise.com/api/samples/export/226"
 }
 ```
 
@@ -27,8 +27,8 @@ When [Creating an Export](#export-create) for example:
 ```
 <response>
    <exportId>226</exportId>
-   <statusUrl>http://submit.agvise.com/api/samples/export/status/226</statusUrl>
-   <downloadUrl>http://submit.agvise.com/api/samples/export/226</statusUrl>
+   <statusUrl>https://submit.agvise.com/api/samples/export/status/226</statusUrl>
+   <downloadUrl>https://submit.agvise.com/api/samples/export/226</statusUrl>
 </response>
 ```
 

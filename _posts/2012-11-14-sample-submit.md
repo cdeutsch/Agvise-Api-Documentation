@@ -11,7 +11,7 @@ layout: nil
 <b>JSON ONLY</b>: all features added 2014 and later only support JSON. XML support will be removed all together at some point in the future.
 </div>
 
-Create or edit a Sample. This is the API version of the [Submit Samples](http://submit.agvise.com/submit) page
+Create or edit a Sample. This is the API version of the [Submit Samples](https://submit.agvise.com/submit) page
 
 ### Parameters
 

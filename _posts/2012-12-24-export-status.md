@@ -42,13 +42,13 @@ Sends back the status of each Export
 	"exportId": 47,
 	"status": "Finished",
 	"message": "Export is finished",
-	"downloadUrl": "http://submit.agvise.com/api/samples/export/47"
+	"downloadUrl": "https://submit.agvise.com/api/samples/export/47"
 },
 {
 	"exportId": 48,
 	"status": "Waiting",
 	"message": "Export is waiting",
-	"downloadUrl": "http://submit.agvise.com/api/samples/export/48"
+	"downloadUrl": "https://submit.agvise.com/api/samples/export/48"
 }]
 ```
 
@@ -60,13 +60,13 @@ Sends back the status of each Export
         <ExportId>47</ExportId>
         <Status>Finished</Status>
         <Message>Export is finished</Message>
-        <DownloadUrl>http://submit.agvise.com/api/samples/export/47</DownloadUrl>
+        <DownloadUrl>https://submit.agvise.com/api/samples/export/47</DownloadUrl>
     </ExportStatus>
     <ExportStatus>
         <ExportId>48</ExportId>
         <Status>Waiting</Status>
         <Message>Export is waiting</Message>
-        <DownloadUrl>http://submit.agvise.com/api/samples/export/48</DownloadUrl>
+        <DownloadUrl>https://submit.agvise.com/api/samples/export/48</DownloadUrl>
     </ExportStatus>
 </ExportStatuses>
 ```

@@ -59,7 +59,7 @@ Sends back the status of the Export
 	"exportId": 226,
 	"status": "Waiting",
 	"message": "Export is waiting",
-	"downloadUrl": "http://submit.agvise.com/api/samples/export/226"
+	"downloadUrl": "https://submit.agvise.com/api/samples/export/226"
 }
 ```
 
@@ -70,7 +70,7 @@ Sends back the status of the Export
     <ExportId>64</ExportId>
     <Status>Finished</Status>
     <Message>Export is finished</Message>
-    <DownloadUrl>http://submit.agvise.com/api/samples/export/64</DownloadUrl>
+    <DownloadUrl>https://submit.agvise.com/api/samples/export/64</DownloadUrl>
 </ExportStatus>
 ```
 

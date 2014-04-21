@@ -115,8 +115,8 @@ Returns the Id of the Export.
 ```
 {
 	"exportId": 226,
-	"statusUrl": "http://submit.agvise.com/api/samples/export/status/62",
-	"downloadUrl": "http://submit.agvise.com/api/samples/export/62"
+	"statusUrl": "https://submit.agvise.com/api/samples/export/status/62",
+	"downloadUrl": "https://submit.agvise.com/api/samples/export/62"
 }
 ```
 
@@ -125,8 +125,8 @@ Returns the Id of the Export.
 ```
 <Export>
     <ExportId>62</ExportId>
-    <StatusUrl>http://submit.agvise.com/api/samples/export/status/62</StatusUrl>
-    <DownloadUrl>http://submit.agvise.com/api/samples/export/62</DownloadUrl>
+    <StatusUrl>https://submit.agvise.com/api/samples/export/status/62</StatusUrl>
+    <DownloadUrl>https://submit.agvise.com/api/samples/export/62</DownloadUrl>
 </Export>
 ```
 
