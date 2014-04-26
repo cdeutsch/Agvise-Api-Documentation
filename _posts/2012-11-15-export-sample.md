@@ -1,5 +1,5 @@
 ---
-category: Samples
+category: Export
 path: '/api/samples/{year}/{referenceNumber}'
 title: 'Get Sample'
 type: 'GET'
@@ -7,7 +7,7 @@ type: 'GET'
 layout: nil
 ---
 
-This method returns a single Sample
+This method returns the test results of a single Sample.
 
 ### Resource URI
 

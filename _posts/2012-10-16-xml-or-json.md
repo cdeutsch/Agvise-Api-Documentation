@@ -4,6 +4,13 @@ title: 'XML or JSON'
 layout: nil
 ---
 
+<div class="warning">
+<b>IMPORTANT: We're moving to JSON only</b> <br />
+Only the Export functionality support XML. <br />
+Features added 2014 and later only support JSON. <br />
+XML support will be removed all together at some point in the future.
+</div>
+
 The API uses XML by default but also supports Content Negotiation. For best results (especially when using Json), always set both the *Accept* and *Content-Type* headers in your requests.
 
 - To indicate what format of data your are submitting, set the *Content-Type* of the Request to either *application/json* or *application/xml*
